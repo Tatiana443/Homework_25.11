@@ -4,7 +4,7 @@
     Random rnd = new Random();
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.Next(min, max + 1);
+        arr[i] = rnd.Next(100, 1000);
     }
     return arr;
 }
@@ -18,7 +18,7 @@ void PrintArray(int[] arr)
     }
     Console.Write("]");
 }
-int[] array = CreateArrayRndInt(50, 1, 1000);
+int[] array = CreateArrayRndInt(50, 100, 1000);
 PrintArray(array);
 int SumEvenElem(int[] arr)
 {
