@@ -5,6 +5,7 @@
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = rnd.NextDouble() * (max - min) + min;
+        arr [i] = Math.Round((arr[i]), 2, MidpointRounding.ToZero);
     }
     return arr;
 }
@@ -14,9 +15,11 @@ void PrintArray(double[] arr)
     for (int i = 0; i < arr.Length; i++)
     {
         Console.Write(arr[i] + " ");
+        arr [i] = Math.Round((arr[i]), 2, MidpointRounding.ToZero);
     }
     Console.Write("]");
 }
+
 double[] array = CreateArrayRndDouble(4, 0, 1);
 PrintArray(array);
 
